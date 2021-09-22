@@ -134,18 +134,18 @@ export default function GmailTreeView() {
        if(data[0].category[0] === 'technician'){
         setTech(`/${data[0].category[0]}`)
        }else{
-         setTech('/test')
+         setTech('/nosubscribe')
        }
        if(data[0].category[1] === 'plant'){
         setPlant(`/${data[0].category[1]}`)
        }else{
-         setPlant('/test')
+         setPlant('/nosubscribe')
        }
 
        if(data[0].category[2] === 'food'){
         setFood(`/${data[0].category[2]}`)
        }else{
-        setFood('/test')
+        setFood('/nosubscribe')
        }      
     })
   },[])

@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Rightbar() {
 
   const [file, setFile] = useState(null);
-
+  const id1 = localStorage.cid
   const Rightbar = () => {
 
     const pcat = useRef();
@@ -51,7 +51,7 @@ export default function Rightbar() {
     }
 
     try{
-      await axios.post("/service/plant/2", plant); //2 pasan
+      await axios.post(`/service/plant/${id1}`, plant); //2 pasan
     }
     catch(err) { 
       console.log(err); 

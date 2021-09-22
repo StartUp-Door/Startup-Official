@@ -9,12 +9,12 @@ export default function Post() {
     // const [isLiked, setIsLiked] = useState();
 
     const [user, setUser] = useState({});
-
+    const id1 = localStorage.cid
       useEffect(() => {
         const fetchData = async () => {
 
             try{
-                const response = await axios.get("/service/technician/1");
+                const response = await axios.get(`/service/technician/${id1}`);
                 setUser(response.data[0]);
                 console.log(response.data[0]);
                 // console.log(response.data[0].cname);

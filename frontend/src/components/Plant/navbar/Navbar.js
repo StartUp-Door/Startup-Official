@@ -100,9 +100,9 @@ const useStyles = makeStyles((theme) => ({
 export default function PrimarySearchAppBar() {
 
   const [Notification, setNotification] = useState(null);
-
+  const id1 = localStorage.cid
   useEffect(() => {
-    fetch('http://localhost:4000/client/service/notify/2')
+    fetch(`http://localhost:4000/client/service/notify/${id1}`)
       .then(res => {
         return res.json();
       })
