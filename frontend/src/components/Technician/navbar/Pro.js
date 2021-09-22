@@ -53,8 +53,9 @@ const useStyles = makeStyles((theme) => ({
 export default function BadgeAvatars() {
 
   const [user, setClient] = useState(null);
+  const id1 = localStorage.cid
   useEffect(() => {
-    fetch('http://localhost:4000/client/2')
+    fetch(`http://localhost:4000/client/${id1}`)
       .then(res => {
         return res.json();
       })

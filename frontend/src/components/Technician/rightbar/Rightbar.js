@@ -28,7 +28,7 @@ export default function Rightbar() {
   ]
 
   const [cate, setCate] = useState([]);
-
+  const id1 = localStorage.cid
   const saveData = (e) => {
     setCate(currentArray => [...currentArray, e[0].value]);
     console.log(e[0].value)
@@ -51,7 +51,7 @@ export default function Rightbar() {
     }
 
     try{
-      await axios.put("/service/technician/2", technician); 
+      await axios.put(`/service/technician/${id1}`, technician); 
     }
     catch(err) { 
       console.log(err); 
